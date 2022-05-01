@@ -1,0 +1,35 @@
+<body>
+    <h1>stack(堆栈)对象的测试</h1>
+    <script language = 'javascript'>                //脚本开始
+        function stack()                            //定义堆栈对象的构造函数
+        {
+            var datastorage = new Array();          //创建一个数组作为数据仓库
+            this.push = function( obj )             //push方法，压入数据对象
+            {
+                datastorage.push( obj );            //将数据存入仓库
+            }
+            this.pop = function()                   //pop方法，从栈中弹出数据对象
+            {
+                return datastorage.pop();           //数据从仓库去除   
+            }
+        }
+        var cartridge_clip = new stack();           //测试stack对象，模拟一个弹夹
+        cartridge_clip.push('子弹1');
+        cartridge_clip.push('子弹2');
+        cartridge_clip.push('子弹3');
+        cartridge_clip.push('子弹4');
+        cartridge_clip.push('子弹5');
+        document.write('<li>子弹入夹顺序：子弹1 子弹2 子弹3 子弹4 子弹5<br>');
+        document.write('<li>子弹出夹顺序:');
+        for (;;)
+        {
+            var cur = cartridge_clip.pop();         //当前弹出的位于顶端的子弹
+            if( cur == null )    
+            {
+                break;                              //如果子弹弹尽时，跳出循环
+
+            }     
+            document.write( cur + '');              
+        }
+    </script>
+</body>

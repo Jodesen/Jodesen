@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="1.css">
+<body class = 'bod'>
+<li>50点点卡单价为4.5元，您确定购买
+<input id = "t1" style = "width :31px;height:18px" type = "text" />张。
+<input id = "b1" type = "button" value = "确定支付" onclick = "return b1_click()"/><!--按钮-->
+<script language = "javascript">
+<!--
+	function b1_click()
+	{
+		if( (t1.value < 1)|| isNaN(t1.value))
+		{
+		alert("您的输入不正确，请重新输入"); //警告
+		t.value = ""; //清空输入框
+		}
+		else//输入合法后统计总金额
+		{
+		alert("您应当支付：" + t1.value*4.5 + "元");//输出应该支付的金额
+		}
+	}	
+-->
+</script>

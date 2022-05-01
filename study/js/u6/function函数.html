@@ -1,0 +1,93 @@
+<body>  <!--文档开始-->
+    <script language = "javascript">                //脚本程序开始
+    function Sum(ag1,ag2)                      //定义加法函数
+        {
+            var sag1 = new String(ag1);             //将参数1转换为字符类型,以便进行参数检查
+            var sag2 = new String(ag2);             //同上
+            if (( ag1 == "" ) || ( ag2 == ""))        //确保输入参数不为空
+            {
+                var e0 = new Error();               //当参数为空时抛出异常
+                e0.Serial = 1000001;                //给错误编号
+                if ( sag1 == "" )
+                {
+                    e0.message = 'sum函数参数非法：第1个参数为空！';    //错误信息描述
+                }
+                else
+                {
+                    e0.message = 'sum函数参数非法:第2个参数为空！';
+                }
+                throw e0;                                           //抛出错误信息
+            }
+            for ( i = 0; i<sag1.length;i++ )        //参数合法性检查
+            {
+                for ( j = 0;j<10;j++)               //检查所有字符
+                {
+                    if( sag1.charAt(i) == j)
+                    {
+                        break;                      //跳出循环
+                    }                                            
+                    else
+                    {
+                        if ( j == 9 )
+                        {
+                        var e1 = new Error();       //错误信息对象
+                        e1.Serial = 1000001;        //错误信息编号
+                        e1.message = 'sum函数参数:' + sag1 + '是非法数字'; //描述错误信息
+                        throw e1;                   //抛出错误信息
+                        }                
+                    }                 
+                }
+            }
+            for ( n = 0; n<sag2.length;n++ )        //参数合法性检查
+            {
+                for ( m = 0;m<10;m++)               //检查所有字符
+                {
+                    if( sag2.charAt(n) == m)
+                    {
+                        break;                      //跳出循环
+                    }                                            
+                    else
+                    {
+                        if ( m == 9 )
+                        {
+                        var e2 = new Error();       //错误信息对象
+                        e2.Serial = 1000001;        //错误信息编号
+                        e2.message = 'sum函数参数:' + sag2 + '是非法数字'; //描述错误信息
+                        throw e2;                    //抛出
+                        }
+                    }            
+                }       
+            }  
+            return Number(ag1) + Number(ag2);       //参数正确则返回两个值的和
+        }    
+    function Bt1_onclick()
+    {
+        try                                         //提取用户输入的数据
+        {
+             var tex1 = document.getElementById('tex1');
+             var tex2 = document.getElementById('tex2');
+             var tex3 = document.getElementById('tex3');
+             var sum = Sum(tex1.value,tex2.value);  //调用函数进行计算
+             tex3.value = sum;
+        }
+        catch(e)                                    //有错误发生则输出错误信息
+        {
+            alert( e.message );                     //输出异常中的信息
+            if ( e.Serial = 1000001 )               //如果是1000001号错误
+            {
+                alert( e.message );                 //输出异常消息
+                e = null;                           //断开对错误对象的引用
+            }
+        }
+    }
+    </script><!--脚本程序结束--->
+    <!--用户界面，包括三个文本框，一个按钮-->
+    <input id = 'tex1' type="text" style ='width:84px' maxlength="20" />
+        <!--文本框-->
+   +<input id = 'tex2' type="text" style ="width:75px" maxlength="20"/>
+        <!--文本框-->
+   =<input id = 'tex3' type="text" style ="width:69px"/>
+        <!--文本框-->
+    <input id = 'Bt1'  type="button" value = '计算' onclick="return Bt1_onclick()"/>
+        <!--按钮-->
+</body>

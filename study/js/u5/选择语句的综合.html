@@ -1,0 +1,49 @@
+<body id = "body1" style = "background:red"><!--设定body的id以便js的操作-->
+<script language = "javascript">
+function changebgcolor( colorindex )
+	{
+		var dombody = document.getElementById("body1");<!--获取body节点-->
+		if ( dombody == null)<!--判断是否获取到的body节点-->
+		{
+			alert("未获取到节点")
+			return;<!--未获取到，直接返回-->
+		}
+		else //成功获取节点
+		{
+			switch( colorindex )//实用多路选择开关，根据换入的值来改变body的style值
+			{
+			case 1:
+				dombody.style.background = "#666666"; //通过设定style的background属性来更改背景图
+				break;
+				
+			case 2:
+				dombody.style.background = "#003333"; //修改同上
+				break;
+				
+			case 3:
+				dombody.style.background = "#ccccff"; //修改同上
+				break;
+				
+			case 4:
+				dombody.style.background = "#6699cc"; //修改同上
+				break;
+				
+			case 5:
+				dombody.style.background = "#blue"; //修改同上
+				break;
+				
+			default:
+				dombody.style.background = "white";//设定背景为白色
+				break;
+			}	
+		}
+	}	
+
+</script>
+<!--设计菜单，根据用户的点击传入值给js，以得到相应的修改-->
+<div style= "width:100px;height:20px;text-align:center;background-color:#666666;"onclick = "return changebgcolor( 1 )"></div> <!--菜单项的div层-->
+<div style= "width:100px;height:20px;text-align:center;background-color:#003333;"onclick = "return changebgcolor( 2 )"></div> <!--菜单项的div层-->
+<div style= "width:100px;height:20px;text-align:center;background-color:#ccccff;"onclick = "return changebgcolor( 3 )"></div> <!--菜单项的div层-->
+<div style= "width:100px;height:20px;text-align:center;background-color:#6699cc;"onclick = "return changebgcolor( 4 )"></div> <!--菜单项的div层-->
+<div style= "width:100px;height:20px;text-align:center;background-color:#blue;"onclick = "return changebgcolor( 5 )"></div> <!--菜单项的div层-->
+</body>

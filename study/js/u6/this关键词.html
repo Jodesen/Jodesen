@@ -1,0 +1,17 @@
+<body>
+    <h1>this关键词test</h1>
+    <script language = 'javascript'>
+        var chair = '公园里的椅子';
+        function tomhome()
+        {
+            this.chair = '汤姆家的椅子';
+        }
+        function usechair()
+        {
+            document.write('<li>此时使用的是:' + this.chair + '<br>');
+        }
+        var th = new tomhome();
+        usechair();
+        usechair.call(th);
+    </script>
+</body>

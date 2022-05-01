@@ -1,0 +1,19 @@
+<script language = "javascript">
+<!--
+    var omyarray = new Array(13,56,5,95,45,45,41,52,36,54,123,321);  //定义变量引用一个数组
+    document.write("排序前：" + omyarray);   //输出排序前的数组
+    for  ( index in omyarray )  //开始排序
+    {
+        for ( i in omyarray)      //两两比较
+        {
+            if ( omyarray[index] < omyarray[i]) //如果当前元素小于第i个元素
+            {
+            ntep = omyarray[index]; //交换位置
+            omyarray[index] = omyarray[i];
+            omyarray[i] = ntep;
+            }
+        }
+    }
+		document.write("<br>排序后：" + omyarray); //输出排序后的数组
+		-->
+</script>

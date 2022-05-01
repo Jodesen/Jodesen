@@ -1,0 +1,92 @@
+#touxiang {
+	position: absolute;
+	left: 42%;
+	top: 500px;
+	width: 350px;
+	height: 349px;
+}
+.touxiang{
+    width: 350px;
+    height: 350px;
+    margin: 5px 5px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
+    transition: all 0.5s;
+	z-index: 100;
+	cursor:pointer;
+    /*box-shadow: 0px 0px 10px #ffffff;*/
+}
+
+.touxiang:hover{
+    transform: rotate(1080deg)scale(1.25,1.25);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+	z-index: 100;
+    /*box-shadow: 0px 0px 10px #ffffff;*/
+}
+.bolg{
+	position: absolute;
+	left: 47.9%;
+	top: 920px;
+	width: 149px;
+	z-index: 1;
+	background-color: #39F;
+	color: #FFFFFF;
+	cursor: pointer;
+	border-radius: 30px;
+	height: 62px;
+	transition: all 0.5s;
+	}
+.bolg:hover{
+	transform: scale(1.3); 
+	transition: all 0.5s;
+	
+	}
+
+
+
+
+
+
+.ziti{
+	position: absolute;
+	left: 15px;
+	top: -18px;
+	font-size: 28px;
+	width: 117px;
+	height: 46px;
+	color:#FFF;
+	}
+	
+	
+	
+	
+#xiala{
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	width: 80px;
+	height: 70px;
+	z-index: 10;
+}
+  @-webkit-keyframes rightan{
+                from {
+                    bottom: 0%;
+                    opacity: 0;
+                } to {
+                    bottom: 5%;
+                    opacity: 1;
+                }
+            }
+            .rightan{
+                -webkit-animation: rightan 1s infinite;
+                -webkit-animation-fill-mode: both;
+            }
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,17 @@
+<body>
+<h1>push方法的使用</h1>
+<script language  = "javascript">//脚本程序开始
+var list = new Array();//创建一个空数组作为名单
+    for(;;)//无限循环
+    {
+        var name = prompt('请输入名字','名字');//要求用户输入名字
+        if(name == null )                    //如果用户取消则退出循环
+        {
+            break;                          //跳出循环
+        }
+        list.push( name );                  //将输入的数据作为数组元素添加到数组
+    }
+    var comlist =list.join(' ');             //使用空格讲个元素隔开，作为字符串输出
+    document.write( comlist );
+</script>
+</body>

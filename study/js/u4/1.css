@@ -1,0 +1,9 @@
+.bod{
+
+ background-image: url(../bg.jpg);
+
+background-repeat:  no-repeat;
+/* 拉伸占满整个容器 */
+background-size: cover;
+
+}

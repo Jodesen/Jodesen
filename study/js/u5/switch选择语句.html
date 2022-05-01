@@ -1,0 +1,35 @@
+<body>
+<li>您是：
+<input id = "t1" style = "width :50px;height:18px" type = "text" />先生/女士   <!--获取输入的姓名-->
+<input id = "b1" type = "button" value = "确定" onclick = "return b1_click()"/><!--按钮-->
+<script language = "javascript">
+<!--
+
+	function b1_click()<!--定义按钮点击函数-->
+	{
+		var who = t1.value;
+		switch( who )<!--选择语句-->
+		{
+			case "Bob":
+				alert("Hello," + who);
+				break;
+			
+			case "Jim":
+				alert("Hello," + who);
+				break;
+			
+			case "Bello":
+				alert("Hello," + who);
+				break;
+
+			case "Xu":
+				alert("Hello," + who);
+				break;
+			
+			default:
+				alert("nobody~")
+												
+		}
+	}	
+-->
+</script>

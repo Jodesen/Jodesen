@@ -1,0 +1,45 @@
+<body>
+<script language = "javascript"> //脚本开始
+<!--
+    var msgcoded; //加密前的字符串
+    var msgencoded; //解密后的字符
+    function codeandencode(pkey,date) //加密解密函数
+    {
+        var codedstr = "" //已加密或解密的字符序列
+        for ( i = 0 ; i < date.length; i++) //对信息串逐个加密
+        {
+            var datecoded;    //已加密或解密的字符的unicode编码
+            for ( j = 0; j<pkey.length; j++) //密钥串的每个字符与串中当前字符进行位异或
+            {
+                var keycoded = pkey.charCodeAt( j ); //从密钥串中提取一个字符的unicode编码
+                var datecoded = date.charCodeAt( i )^keycoded; //异或运算               
+            }
+			codedstr +=String.fromCharCode( datecoded );		
+        }
+		return codedstr; //返回信息串
+	}
+	function b1_onclick()//设计加密按钮的处理事件
+	{
+		var date = text1.value; //提取需要加密的文本
+		var key = pass1.value; //提取密钥
+		msgcoded = codeandencode( key , date); //调用加密函数
+		text1.value = msgcoded; //在文本域内显示加密后的结果
+	}
+	
+	function be1_onclick()
+	{
+		var date = text1.value; //提取需要解密的文本
+		var key = pass1.value; //提取密钥
+		msgencoded = codeandencode( key , date); //调用加解密函数
+		text1.value = msgencoded; //在文本域内显示解密后的结果
+	}
+-->
+</script>
+<!--用户界面，设置一个文本域，一个文本编辑框，两个按钮-->
+ &nbsp;<textarea id = "text1" style = "width:331px;height:211px;"></textarea>&nbsp;<br />
+ 密钥：&nbsp;
+ <input id = "pass1" type = "password" />&nbsp;
+ <input id = "b1" type = "button" value = "加密" onclick = "return b1_onclick()"
+ style = "width:57px"/>
+ <input id = "be1" style = "width:55px" type = "button" value= "解密" onclick = "return be1_onclick()" />
+ </body>

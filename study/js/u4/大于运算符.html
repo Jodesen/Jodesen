@@ -1,0 +1,38 @@
+<body style = "font-size:12px">
+<script language = "javascript">
+<!--
+	while(true){ //无限判断输入是否合法
+		var yue = prompt("请输入余额：","0"); //用户输入余额
+		var pay = 123.45 //需要支付的金额
+		if (yue != null & yue > 0)//判断用户输入是否合法
+		{
+			document.write("<li>您账上余额为：" + yue + "元<br>" );
+			document.write("<li>您需要支付：" + pay + "元<br>");
+			document.write("<input id =\"bpay\" type = \"button\"value = \"确定支付\"\
+			 onclick ="+"\"return bpay_onclick()\" \
+			 style = \"width:150px\"/><br>");
+			//生成确认支付按钮
+			if (pay > yue) // 如果余额不足，支付按钮设置为失效
+			{
+				document.write("信息:<font color = red >您的余额不足，无法完成支付！</font>");
+				bpay.disabled = true;
+			}
+			else
+			{
+				bpay.disabled = false;
+			}
+		function bpay_onclick()
+		{
+			document.write("<li><font color = red>已经支付完成</font>");
+			document.write("您账上余额：" + (yue - pay) + "元<br>")
+		}
+		break; //退出循环体br
+		}
+		else
+		{
+			alert("输入不合法")	
+		}
+	}
+-->
+</script>
+</body>	

@@ -1,0 +1,35 @@
+<head><!--文档头-->
+    <title>综合练习</title>
+    <script language = 'javascript' type="text/javascript"> //脚本程序开始
+    //<!CDATA[
+    function bt1_onclick()                                    //按钮事件处理函数
+    {
+        try                                                 //捕捉异常
+        {
+            var cmdwin = document.getElementById('text1');  //获取文本框的引用
+            var str = "try{" + cmdwin.value + "}catch(e){alert('代码存在错误，请检查:' + e.description);}" ; //构造函数体
+            var cmd = new  Function(str);                   //构造函数
+            cmd();                                          //调用函数
+        }
+        catch(e)                                            //捕捉异常
+        {
+            alert('错误:' + e.descript);
+        }
+    }  
+    //]>
+    </script><!--脚本程序结束-->
+</head><!--文档头结束-->
+<body><!--交互界面-->
+<div align = "center" style="border-right:#000000 1px solid;  
+                             width:618px;
+                             border-bottom:#000000 1px solid;
+                             height:336px;
+                             background-color: #ffffff;">
+    <textarea id = 'text1' style="width: 612px;
+                                  height: 300px;">
+    </textarea><!--文本域-->
+    <input id = "bt2" type = "button" value="执行程序" onclick="bt1_onclick()" style = "width:145px"/></div>     <!--按钮-->
+
+
+</body>
+    

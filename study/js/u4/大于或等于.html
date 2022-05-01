@@ -1,0 +1,25 @@
+<body>
+<script = language = "javascript">
+<!--
+	var fruit = new Array("梨","3.5","葡萄",7,"香蕉",2,"苹果",3,"荔枝",6);
+	for (index in fruit)
+	{
+		if (index%2 == 0) //如果索引数为偶数，则为水果名
+		{
+		document.write("<li>" + fruit[index] + ": ");
+		}
+		else //元素索引为奇数，则为对应水果的价格
+		{
+		document.write(fruit[index] + "元\t");//输出水果价格
+		document.write("<input id =\"b1" + index + "\"type=\"button\""
+		+"value=\"购买\""+"onclick=\"return b1_onclick(this.serial-1)\" serial=\""
+		+ index + "\" /><br>");
+		}
+	}
+	function b1_onclick( arg )//购买按钮的单击事件处理函数
+	{
+		alert("您即将购买：" + fruit[arg]);
+	}
+-->
+ </script>
+ </body>
